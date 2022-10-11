@@ -1,0 +1,77 @@
+/*===== Font =====*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+/*===== Global Variables =====*/
+:root {
+    --primary-background: #f8f9fa;
+    --primary-color: #000000;
+    --white-color: #ffffff;
+    --secondary-color1: #B1B2FF;
+    --secondary-color2: #AAC4FF;
+    --shadow-dark-color: rgba(0 0 0 / 20%);
+    --shadow-light-color: rgba(0 0 0 / 10%);
+    --transition: all 150ms ease-out;
+}
+
+/*===== Global Styles =====*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: var(--primary-background);
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+blockquote {
+    border-left: 3px solid;
+    padding: .5rem;
+    padding-left: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/*===== Global Classes =====*/
+.wrapper {
+    max-width: 1280px;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.section {
+    min-height: 100vh;
+    padding: 6rem 0;
+}
