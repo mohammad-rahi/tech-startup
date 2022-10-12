@@ -12,6 +12,14 @@ function scrollFunction() {
         if (window.innerWidth > 800) {
             document.querySelector(".navbar_header").style.backdropFilter = "blur(12px)";
         }
+        else {
+            if (document.querySelector('.navbar_menu').classList.contains('active')) {
+                document.querySelector(".navbar_header").style.backdropFilter = "unset";
+            }
+            else {
+                document.querySelector(".navbar_header").style.backdropFilter = "blur(12px)";
+            }
+        }
 
     } else {
         document.querySelector(".navbar_header").style.padding = "1.5rem";
