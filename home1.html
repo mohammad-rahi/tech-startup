@@ -8,6 +8,11 @@
     <title>Tech Startup</title>
     <link rel="shortcut icon" href="./assets/images/startup_logo.svg" type="image/x-icon">
 
+    <!--===== Font Awesome =====-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!--===== Styles =====-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./styles/global.css">
@@ -15,6 +20,8 @@
 </head>
 
 <body>
+    <div class="loading"></div>
+
     <!--===== Header =====-->
     <header class="navbar_header">
         <nav class="navbar_nav wrapper">
@@ -73,12 +80,14 @@
                     </svg></a>
             </div>
             <div class="hero_right wow animate__animated animate__fadeInUp" data-wow-delay="2s">
-                <div class="play_btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
-                    </svg>
+                <div class="hero_right_video">
+                    <div class="play_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                        </svg>
+                    </div>
                 </div>
             </div>
 
@@ -218,7 +227,7 @@
                 <div class="service_card">
                     <div class="service">
                         <div class="service_info">
-                            <h2>Front-End Development</h2>
+                            <h2>Web Development</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, laboriosam? Atque,
                                 quo
                                 aspernatur inventore veniam fuga labore necessitatibus quas quis soluta saepe
@@ -233,7 +242,7 @@
                         </div>
                         <figure class="service_image">
                             <div class="service_image_overlay">
-                                <h2>Front-End Development</h2>
+                                <h2>Web Development</h2>
                                 <a href="#" class="btn">Read more <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -307,7 +316,7 @@
 
             <div class="blog_container">
                 <div class="wrapper blog_wrapper">
-                    <h2 class="loading">Loading...</h2>
+                    <h2>Loading...</h2>
                 </div>
                 <a href="./blog.html" class="blog_btn btn">View more blogs <svg xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -327,66 +336,7 @@
             </div>
 
             <div class="about_card_wrapper">
-                <div class="about_card">
-                    <figure class="about_image"></figure>
-                    <div class="about_card_info">
-                        <h3 class="about_name">Jane Doe</h3>
-                        <p class="about_profession">CEO & Founder</p>
-                        <p class="about_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-                            voluptates officiis, quibusdam minima vitae autem nobis repudiandae neque dignissimos fugiat
-                            maxime aliquam adipisci soluta voluptatum id sapiente quae perspiciatis impedit.</p>
-                    </div>
-                </div>
-                <div class="about_card">
-                    <figure class="about_image"></figure>
-                    <div class="about_card_info">
-                        <h3 class="about_name">Jane Doe</h3>
-                        <p class="about_profession">Designer</p>
-                        <p class="about_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-                            voluptates officiis, quibusdam minima vitae autem nobis repudiandae neque dignissimos fugiat
-                            maxime aliquam adipisci soluta voluptatum id sapiente quae perspiciatis impedit.</p>
-                    </div>
-                </div>
-                <div class="about_card">
-                    <figure class="about_image"></figure>
-                    <div class="about_card_info">
-                        <h3 class="about_name">Jane Doe</h3>
-                        <p class="about_profession">Developer</p>
-                        <p class="about_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-                            voluptates officiis, quibusdam minima vitae autem nobis repudiandae neque dignissimos fugiat
-                            maxime aliquam adipisci soluta voluptatum id sapiente quae perspiciatis impedit.</p>
-                    </div>
-                </div>
-                <div class="about_card">
-                    <figure class="about_image"></figure>
-                    <div class="about_card_info">
-                        <h3 class="about_name">Jane Doe</h3>
-                        <p class="about_profession">CEO & Founder</p>
-                        <p class="about_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-                            voluptates officiis, quibusdam minima vitae autem nobis repudiandae neque dignissimos fugiat
-                            maxime aliquam adipisci soluta voluptatum id sapiente quae perspiciatis impedit.</p>
-                    </div>
-                </div>
-                <div class="about_card">
-                    <figure class="about_image"></figure>
-                    <div class="about_card_info">
-                        <h3 class="about_name">Jane Doe</h3>
-                        <p class="about_profession">CEO & Founder</p>
-                        <p class="about_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-                            voluptates officiis, quibusdam minima vitae autem nobis repudiandae neque dignissimos fugiat
-                            maxime aliquam adipisci soluta voluptatum id sapiente quae perspiciatis impedit.</p>
-                    </div>
-                </div>
-                <div class="about_card">
-                    <figure class="about_image"></figure>
-                    <div class="about_card_info">
-                        <h3 class="about_name">Jane Doe</h3>
-                        <p class="about_profession">CEO & Founder</p>
-                        <p class="about_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-                            voluptates officiis, quibusdam minima vitae autem nobis repudiandae neque dignissimos fugiat
-                            maxime aliquam adipisci soluta voluptatum id sapiente quae perspiciatis impedit.</p>
-                    </div>
-                </div>
+                <h2>Loading...</h2>
             </div>
 
             <ul class="circles about_circles">
@@ -416,9 +366,17 @@
 
     </main>
 
-    <!--===== Header =====-->
+    <!--===== Footer =====-->
     <footer class="footer">
-        <a href="#home" class="top">Back to top</a>
+        <a href="#home" class="top">
+            <div class="top_wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" width="16" height="16"> 
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+                </svg>
+                Back to top
+            </div>
+        </a>
         <div class="wrapper">
             <div class="footer_wrapper">
                 <div>
@@ -455,25 +413,35 @@
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div class="footer_social">
                     <h4>Follow us on</h4>
                     <ul>
                         <li>
-                            <a href="#">LinkedIn</a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
                         </li>
                         <li>
-                            <a href="#">Twitter</a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
                         </li>
                         <li>
-                            <a href="#">Instagram</a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
                         </li>
                         <li>
-                            <a href="#">Dribble</a>
+                            <a href="#"><i class="fa-solid fa-basketball"></i> Dribble</a>
                         </li>
                     </ul>
                 </div>
+                <div class="footer_newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore reprehenderit nisi perspiciatis
+                        obcaecati.</p>
+                    <div class="newsletter_form">
+                        <input type="email" required placeholder="Enter your email" />
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                </div>
             </div>
         </div>
+        <p class="footer_copyright">&copy; 2022 Copyright TechStartup.com</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
