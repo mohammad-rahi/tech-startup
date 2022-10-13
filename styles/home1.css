@@ -888,8 +888,7 @@
     left: -100%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: #000;
-    color: #fff;
+    background: linear-gradient(to right, var(--secondary-color1), var(--secondary-color2));
     border-radius: .5rem;
     padding: .3rem .6rem;
     font-size: 14px;
@@ -921,8 +920,7 @@
     left: -100%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: #000;
-    color: #fff;
+    background: linear-gradient(to right, var(--secondary-color1), var(--secondary-color2));
     border-radius: .5rem;
     padding: .3rem .6rem;
     font-size: 14px;
