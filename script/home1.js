@@ -6,8 +6,7 @@ window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.querySelector(".navbar_header").style.padding = "1rem";
-        document.querySelector(".navbar_header").style.background = "rgba(255 255 255 / 65%)";
+        document.querySelector(".navbar_header").style.background = "var(--white-light)";
 
         if (window.innerWidth > 800) {
             document.querySelector(".navbar_header").style.backdropFilter = "blur(12px)";
@@ -22,7 +21,6 @@ function scrollFunction() {
         }
 
     } else {
-        document.querySelector(".navbar_header").style.padding = "1.5rem";
         document.querySelector(".navbar_header").style.background = "unset";
         document.querySelector(".navbar_header").style.backdropFilter = "unset";
     }
@@ -154,4 +152,152 @@ const closeMenu = () => {
 // Remove Loading
 window.onload = () => {
     document.querySelector('.loading').style.display = "none";
+
+    document.documentElement.style.setProperty('--secondary-color1', localStorage.getItem('secondary1'));
+    document.documentElement.style.setProperty('--secondary-color2', localStorage.getItem('secondary2'));
+    document.documentElement.style.setProperty('--gradient1', localStorage.getItem('gradient1'));
+    document.documentElement.style.setProperty('--gradient2', localStorage.getItem('gradient2'));
+
+
+    document.documentElement.style.setProperty('--primary-background', localStorage.getItem('primaryBackground'));
+    document.documentElement.style.setProperty('--primary-color', localStorage.getItem('primaryColor'));
+    document.documentElement.style.setProperty('--white-color', localStorage.getItem('whiteColor'));
+    document.documentElement.style.setProperty('--white-light', localStorage.getItem('whiteLight'));
+
+
+    document.querySelector(`.color_wrapper [data-color="${localStorage.getItem('dataColor')}"]`).classList.add('active');
+
+    document.querySelector(`.theme_wrapper [data-theme="${localStorage.getItem('dataTheme')}"]`).classList.add('active');
+
 }
+
+// Choose theme
+document.querySelectorAll('.theme_wrapper div').forEach(theme => {
+    theme.addEventListener('click', () => {
+
+        let currentTheme = document.querySelector(`.theme_wrapper [data-theme="${localStorage.getItem('dataTheme')}"]`);
+
+
+        if (theme.dataset.theme === "light") {
+            let primaryBackground = '#f8f9fa';
+            let primaryColor = '#000000';
+            let whiteColor = '#ffffff';
+            let whiteLight = 'rgba(255 255 255 / 65%)';
+
+            document.documentElement.style.setProperty('--primary-background', primaryBackground);
+            document.documentElement.style.setProperty('--primary-color', primaryColor);
+            document.documentElement.style.setProperty('--white-color', whiteColor);
+            document.documentElement.style.setProperty('--white-light', whiteLight);
+
+            localStorage.setItem('dataTheme', 'light');
+            localStorage.setItem('primaryBackground', primaryBackground);
+            localStorage.setItem('primaryColor', primaryColor);
+            localStorage.setItem('whiteColor', whiteColor);
+            localStorage.setItem('whiteLight', whiteLight);
+
+            currentTheme.className = '';
+            theme.classList.add('active');
+
+        }
+        else {
+            let primaryBackground = '#000000';
+            let primaryColor = '#f8f9fa';
+            let whiteColor = '#111111';
+            let whiteLight = 'rgba(0 0 0 / 65%)';
+
+            document.documentElement.style.setProperty('--primary-background', primaryBackground);
+            document.documentElement.style.setProperty('--primary-color', primaryColor);
+            document.documentElement.style.setProperty('--white-color', whiteColor);
+            document.documentElement.style.setProperty('--white-light', whiteLight);
+
+            localStorage.setItem('dataTheme', 'dark');
+            localStorage.setItem('primaryBackground', primaryBackground);
+            localStorage.setItem('primaryColor', primaryColor);
+            localStorage.setItem('whiteColor', whiteColor);
+            localStorage.setItem('whiteLight', whiteLight);
+
+            currentTheme.className = '';
+            theme.classList.add('active');
+
+        }
+    });
+})
+
+// Choose color
+document.querySelectorAll('.color_wrapper div').forEach(color => {
+    color.addEventListener('click', () => {
+
+        let currentColor = document.querySelector(`.color_wrapper [data-color="${localStorage.getItem('dataColor')}"]`);
+
+
+        if (color.dataset.color === "sky") {
+            let secondary1 = 'rgb(69, 83, 157)';
+            let secondary2 = 'rgb(76, 179, 198)';
+            
+            let gradient1 = 'rgb(69, 83, 157, .2)';
+            let gradient2 = 'rgb(76, 179, 198, .2)';
+
+            document.documentElement.style.setProperty('--secondary-color1', secondary1);
+            document.documentElement.style.setProperty('--secondary-color2', secondary2);
+            document.documentElement.style.setProperty('--gradient-color1', gradient1);
+            document.documentElement.style.setProperty('--gradient-color2', gradient2);
+
+            localStorage.setItem('secondary1', secondary1);
+            localStorage.setItem('secondary2', secondary2);
+            localStorage.setItem('gradient1', gradient1);
+            localStorage.setItem('gradient2', gradient2);
+            
+            localStorage.setItem('dataColor', 'sky');
+
+            currentColor.className = '';
+            color.classList.add('active');
+
+        }
+        else if (color.dataset.color === "rosy") {
+            let secondary1 = '#504c89';
+            let secondary2 = '#b61ec9';
+
+            let gradient1 = 'rgb(80, 76, 137, .2)';
+            let gradient2 = 'rgb(182, 30, 201, .2)';
+
+            document.documentElement.style.setProperty('--secondary-color1', secondary1);
+            document.documentElement.style.setProperty('--secondary-color2', secondary2);
+            document.documentElement.style.setProperty('--gradient-color1', gradient1);
+            document.documentElement.style.setProperty('--gradient-color2', gradient2);
+
+            localStorage.setItem('secondary1', secondary1);
+            localStorage.setItem('secondary2', secondary2);
+            localStorage.setItem('gradient1', gradient1);
+            localStorage.setItem('gradient2', gradient2);
+
+            localStorage.setItem('dataColor', 'rosy');
+
+            currentColor.className = '';
+            color.classList.add('active');
+
+        }
+        else {
+            let secondary1 = '#B1B2FF';
+            let secondary2 = '#AAC4FF';
+
+            let gradient1 = 'rgb(177 178 255 / 30%)';
+            let gradient2 = 'rgb(170 196 255 / 30%)';
+
+            document.documentElement.style.setProperty('--secondary-color1', secondary1);
+            document.documentElement.style.setProperty('--secondary-color2', secondary2);
+            document.documentElement.style.setProperty('--gradient-color1', gradient1);
+            document.documentElement.style.setProperty('--gradient-color2', gradient2);
+
+            localStorage.setItem('secondary1', secondary1);
+            localStorage.setItem('secondary2', secondary2);
+            localStorage.setItem('gradient1', gradient1);
+            localStorage.setItem('gradient2', gradient2);
+
+            localStorage.setItem('dataColor', 'purple');
+
+            currentColor.className = '';
+            color.classList.add('active');
+
+        }
+    });
+})
