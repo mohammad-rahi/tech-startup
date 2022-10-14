@@ -5,14 +5,14 @@
 :root {
     --primary-background: ;
     
-    --primary-background: #f8f9fa;
-    --primary-color: #000000;
-    --white-color: #ffffff;
-    --secondary-color1: #B1B2FF;
-    --secondary-color2: #AAC4FF;
-    --gradient-color1: rgb(177 178 255 / 30%);
-    --gradient-color2: rgb(170 196 255 / 30%);
-    --white-light: rgba(255 255 255 / 65%);
+    --primary-background: #000000;
+    --primary-color: #f8f9fa;
+    --white-color: #111111;
+    --white-light: rgba(0 0 0 / 65%);
+    --secondary-color1: rgb(69, 83, 157);
+    --secondary-color2: rgb(76, 179, 198);
+    --gradient-color1: rgb(69, 83, 157, .2);
+    --gradient-color2: rgb(76, 179, 198, .2);
     --shadow-dark-color: rgba(0 0 0 / 20%);
     --shadow-light-color: rgba(0 0 0 / 10%);
     --transition: all 150ms ease-out;

@@ -511,7 +511,7 @@
     width: 100%;
     position: relative;
     display: grid;
-    grid-template-columns: auto 10%;
+    grid-template-columns: auto 15%;
     gap: .5rem;
 }
 

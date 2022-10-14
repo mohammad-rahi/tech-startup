@@ -218,7 +218,6 @@ document.querySelectorAll('.theme_wrapper div').forEach(theme => {
 
             currentTheme.className = '';
             theme.classList.add('active');
-
         }
     });
 })
