@@ -149,14 +149,14 @@ const closeMenu = () => {
     document.querySelector('.navbar_header').style.backdropFilter = "blur(12px)";
 }
 
-// Remove Loading
+// Window onload
 window.onload = () => {
     document.querySelector('.loading').style.display = "none";
 
     document.documentElement.style.setProperty('--secondary-color1', localStorage.getItem('secondary1'));
     document.documentElement.style.setProperty('--secondary-color2', localStorage.getItem('secondary2'));
-    document.documentElement.style.setProperty('--gradient1', localStorage.getItem('gradient1'));
-    document.documentElement.style.setProperty('--gradient2', localStorage.getItem('gradient2'));
+    document.documentElement.style.setProperty('--gradient-color1', localStorage.getItem('gradient1'));
+    document.documentElement.style.setProperty('--gradient-color2', localStorage.getItem('gradient2'));
 
 
     document.documentElement.style.setProperty('--primary-background', localStorage.getItem('primaryBackground'));
@@ -233,7 +233,7 @@ document.querySelectorAll('.color_wrapper div').forEach(color => {
         if (color.dataset.color === "sky") {
             let secondary1 = 'rgb(69, 83, 157)';
             let secondary2 = 'rgb(76, 179, 198)';
-            
+
             let gradient1 = 'rgb(69, 83, 157, .2)';
             let gradient2 = 'rgb(76, 179, 198, .2)';
 
@@ -246,7 +246,7 @@ document.querySelectorAll('.color_wrapper div').forEach(color => {
             localStorage.setItem('secondary2', secondary2);
             localStorage.setItem('gradient1', gradient1);
             localStorage.setItem('gradient2', gradient2);
-            
+
             localStorage.setItem('dataColor', 'sky');
 
             currentColor.className = '';
@@ -301,3 +301,17 @@ document.querySelectorAll('.color_wrapper div').forEach(color => {
         }
     });
 })
+
+const playBtnAnimation = (event) => {
+    const x = event.offsetX;
+    const y = event.offsetY;
+
+    document.querySelector('.play_btn').style.top = `${y}px`
+    document.querySelector('.play_btn').style.left = `${x}px`
+};
+
+// document.querySelector('.hero_right_video').addEventListener('mousemove', (event) => {
+//     playBtnAnimation(event);
+// });
+// document.querySelector('.hero_right_video').addEventListener('mouseenter', playBtnAnimation);
+// document.querySelector('.hero_right_video').addEventListener('mouseleave', playBtnAnimation);
