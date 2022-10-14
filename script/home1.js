@@ -177,23 +177,22 @@ document.querySelectorAll('.theme_wrapper div').forEach(theme => {
 
         let currentTheme = document.querySelector(`.theme_wrapper [data-theme="${localStorage.getItem('dataTheme')}"]`);
 
+        let primaryBackground, primaryColor, whiteColor, whiteLight, theme;
+
 
         if (theme.dataset.theme === "light") {
-            let primaryBackground = '#f8f9fa';
-            let primaryColor = '#000000';
-            let whiteColor = '#ffffff';
-            let whiteLight = 'rgba(255 255 255 / 65%)';
+            primaryBackground = '#f8f9fa', primaryColor = '#000000', whiteColor = '#ffffff', whiteLight = 'rgba(255 255 255 / 65%)', theme = "light";
 
-            document.documentElement.style.setProperty('--primary-background', primaryBackground);
-            document.documentElement.style.setProperty('--primary-color', primaryColor);
-            document.documentElement.style.setProperty('--white-color', whiteColor);
-            document.documentElement.style.setProperty('--white-light', whiteLight);
+            // document.documentElement.style.setProperty('--primary-background', primaryBackground);
+            // document.documentElement.style.setProperty('--primary-color', primaryColor);
+            // document.documentElement.style.setProperty('--white-color', whiteColor);
+            // document.documentElement.style.setProperty('--white-light', whiteLight);
 
-            localStorage.setItem('dataTheme', 'light');
-            localStorage.setItem('primaryBackground', primaryBackground);
-            localStorage.setItem('primaryColor', primaryColor);
-            localStorage.setItem('whiteColor', whiteColor);
-            localStorage.setItem('whiteLight', whiteLight);
+            // localStorage.setItem('dataTheme', 'light');
+            // localStorage.setItem('primaryBackground', primaryBackground);
+            // localStorage.setItem('primaryColor', primaryColor);
+            // localStorage.setItem('whiteColor', whiteColor);
+            // localStorage.setItem('whiteLight', whiteLight);
 
             currentTheme.className = '';
             theme.classList.add('active');
@@ -204,21 +203,34 @@ document.querySelectorAll('.theme_wrapper div').forEach(theme => {
             let primaryColor = '#f8f9fa';
             let whiteColor = '#111111';
             let whiteLight = 'rgba(0 0 0 / 65%)';
+            let theme = "dark";
 
-            document.documentElement.style.setProperty('--primary-background', primaryBackground);
-            document.documentElement.style.setProperty('--primary-color', primaryColor);
-            document.documentElement.style.setProperty('--white-color', whiteColor);
-            document.documentElement.style.setProperty('--white-light', whiteLight);
+            // document.documentElement.style.setProperty('--primary-background', primaryBackground);
+            // document.documentElement.style.setProperty('--primary-color', primaryColor);
+            // document.documentElement.style.setProperty('--white-color', whiteColor);
+            // document.documentElement.style.setProperty('--white-light', whiteLight);
 
-            localStorage.setItem('dataTheme', 'dark');
-            localStorage.setItem('primaryBackground', primaryBackground);
-            localStorage.setItem('primaryColor', primaryColor);
-            localStorage.setItem('whiteColor', whiteColor);
-            localStorage.setItem('whiteLight', whiteLight);
+            // localStorage.setItem('dataTheme', 'dark');
+            // localStorage.setItem('primaryBackground', primaryBackground);
+            // localStorage.setItem('primaryColor', primaryColor);
+            // localStorage.setItem('whiteColor', whiteColor);
+            // localStorage.setItem('whiteLight', whiteLight);
 
             currentTheme.className = '';
             theme.classList.add('active');
         }
+
+        document.documentElement.style.setProperty('--primary-background', primaryBackground);
+        document.documentElement.style.setProperty('--primary-color', primaryColor);
+        document.documentElement.style.setProperty('--white-color', whiteColor);
+        document.documentElement.style.setProperty('--white-light', whiteLight);
+
+        localStorage.setItem('dataTheme', theme);
+        localStorage.setItem('primaryBackground', primaryBackground);
+        localStorage.setItem('primaryColor', primaryColor);
+        localStorage.setItem('whiteColor', whiteColor);
+        localStorage.setItem('whiteLight', whiteLight);
+
     });
 })
 

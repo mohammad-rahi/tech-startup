@@ -655,13 +655,12 @@
     background: linear-gradient(to right, var(--gradient-color1), var(--gradient-color2), var(--gradient-color1));
     backdrop-filter: blur(12px);
     position: relative;
-    padding: 10rem 0;
 }
 
 .section_header {
     max-width: 992px;
     margin: 3rem auto;
-    margin-bottom: 20rem;
+    margin-bottom: 7rem;
     text-align: center;
 }
 
@@ -719,50 +718,10 @@
     margin-top: 1.5rem;
 }
 
-.product_footer {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: .5rem;
-    box-shadow: 2px 2px 16px rgba(0 0 0 / 20%);
-    padding: 5rem;
-    font-size: 3rem;
-    line-height: 3.7rem;
-    text-align: center;
-    background: linear-gradient(to right, var(--gradient-color1), var(--gradient-color2), var(--gradient-color1));
-    backdrop-filter: blur(12px);
-}
-
-.product_header {
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    width: 50%;
-    transform: translate(-50%, 50%);
-    border-radius: .5rem;
-    box-shadow: 2px 2px 16px rgba(0 0 0 / 20%);
-    padding: .5rem;
-    background: linear-gradient(to right, var(--gradient-color1), var(--gradient-color2), var(--gradient-color1));
-    backdrop-filter: blur(12px);
-}
-
-.product_header figure {
-    width: 100%;
-    aspect-ratio: 9/4;
-    background: url('../assets/images/huawei.png') no-repeat center/cover;
-}
-
 /*===== Services Section =====*/
 .service_section {
     margin-top: 2rem;
     position: relative;
-}
-
-.service_header {
-    margin: unset;
-    margin: 3rem auto;
-    margin-bottom: 7rem;
 }
 
 .service_wrapper {
@@ -1056,12 +1015,6 @@
 
 .about_circles {
     height: 100%;
-}
-
-.about_header {
-    margin: unset;
-    margin: 3rem auto;
-    margin-bottom: 7rem;
 }
 
 .about_header p {
