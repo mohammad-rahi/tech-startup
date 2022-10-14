@@ -165,7 +165,9 @@ window.onload = () => {
     document.documentElement.style.setProperty('--white-light', localStorage.getItem('whiteLight'));
 
 
-    document.querySelector(`.color_wrapper [data-color="${localStorage.getItem('dataColor')}"]`).classList.add('active');
+    if (localStorage.getItem('dataColor')) {
+        document.querySelector(`.color_wrapper [data-color="${localStorage.getItem('dataColor')}"]`).classList.add('active');
+    }
 
     document.querySelector(`.theme_wrapper [data-theme="${localStorage.getItem('dataTheme')}"]`).classList.add('active');
 
@@ -174,14 +176,23 @@ window.onload = () => {
 // Choose theme
 document.querySelectorAll('.theme_wrapper div').forEach(theme => {
     theme.addEventListener('click', () => {
+        let currentTheme;
 
-        let currentTheme = document.querySelector(`.theme_wrapper [data-theme="${localStorage.getItem('dataTheme')}"]`);
+        if (localStorage.getItem('dataTheme')) {
+            currentTheme = document.querySelector(`.theme_wrapper [data-theme="${localStorage.getItem('dataTheme')}"]`);
+        }
+        else {
+            currentTheme = document.querySelector(`.theme_wrapper [data-theme="light"]`);
+        }
 
-        let primaryBackground, primaryColor, whiteColor, whiteLight, theme;
-
+        let primaryBackground, primaryColor, whiteColor, whiteLight, dataTheme;
 
         if (theme.dataset.theme === "light") {
-            primaryBackground = '#f8f9fa', primaryColor = '#000000', whiteColor = '#ffffff', whiteLight = 'rgba(255 255 255 / 65%)', theme = "light";
+            primaryBackground = '#f8f9fa';
+            primaryColor = '#000000';
+            whiteColor = '#ffffff';
+            whiteLight = 'rgba(255 255 255 / 65%)';
+            dataTheme = "light";
 
             // document.documentElement.style.setProperty('--primary-background', primaryBackground);
             // document.documentElement.style.setProperty('--primary-color', primaryColor);
@@ -199,11 +210,11 @@ document.querySelectorAll('.theme_wrapper div').forEach(theme => {
 
         }
         else {
-            let primaryBackground = '#000000';
-            let primaryColor = '#f8f9fa';
-            let whiteColor = '#111111';
-            let whiteLight = 'rgba(0 0 0 / 65%)';
-            let theme = "dark";
+            primaryBackground = '#000000';
+            primaryColor = '#f8f9fa';
+            whiteColor = '#111111';
+            whiteLight = 'rgba(0 0 0 / 65%)';
+            dataTheme = "dark";
 
             // document.documentElement.style.setProperty('--primary-background', primaryBackground);
             // document.documentElement.style.setProperty('--primary-color', primaryColor);
@@ -225,7 +236,7 @@ document.querySelectorAll('.theme_wrapper div').forEach(theme => {
         document.documentElement.style.setProperty('--white-color', whiteColor);
         document.documentElement.style.setProperty('--white-light', whiteLight);
 
-        localStorage.setItem('dataTheme', theme);
+        localStorage.setItem('dataTheme', dataTheme);
         localStorage.setItem('primaryBackground', primaryBackground);
         localStorage.setItem('primaryColor', primaryColor);
         localStorage.setItem('whiteColor', whiteColor);
