@@ -509,7 +509,6 @@
     width: inherit;
     aspect-ratio: 16/9;
     position: relative;
-    /* cursor: none; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -524,12 +523,6 @@
     justify-content: center;
     align-items: center;
     transition: var(--transition);
-    /* position: relative; */
-    /* pointer-events: none; */
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     z-index: 0;
     position: relative;
 }
@@ -675,7 +668,7 @@
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
 }
 
 .hero_right_social ul {
@@ -1620,6 +1613,10 @@
 
     .hero_left blockquote {
         width: 90%;
+    }
+
+    .hero_right{
+        margin-top: 2rem;
     }
 
     .hero_right_social a::after {
