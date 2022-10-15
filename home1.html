@@ -170,11 +170,48 @@
 
                 <div class="navbar_overlay" onclick="closeMenu()"></div>
 
-                <div class="bars" onclick="openMenu()">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
-                    </svg>
+                <div class="navbar_icon_wrapper">
+                    <div class="mobile_theme">
+                        <a href="javascript:void(0)" class="mobile_theme_icon"
+                            onclick="document.querySelector('.mobile_theme_content').classList.add('active')">
+                            <i class="fa-solid fa-sliders"></i>
+                        </a>
+
+                        <div class="mobile_theme_content">
+                            <div class="mobile_theme_overlay"
+                                onclick="document.querySelector('.mobile_theme_content').classList.remove('active')">
+                            </div>
+                            <div class="theme_content">
+                                <div>
+                                    <strong>Themes:</strong>
+                                    <div class="theme_wrapper mobile_theme_wrapper">
+                                        <div data-theme="light">
+                                            <i class="fa-solid fa-sun"></i>
+                                        </div>
+                                        <div data-theme="dark">
+                                            <i class="fa-solid fa-moon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="colors">
+                                    <strong>Colors:</strong>
+                                    <div class="color_wrapper mobile_color_wrapper">
+                                        <div data-color="purple"></div>
+                                        <div data-color="rosy"></div>
+                                        <div data-color="sky"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="bars" onclick="openMenu()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+                        </svg>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -208,7 +245,8 @@
                 </div>
 
                 <div class="hero_video">
-                    <div class="hero_video_overlay" onclick="document.querySelector('.hero_video').classList.remove('active')"></div>
+                    <div class="hero_video_overlay"
+                        onclick="document.querySelector('.hero_video').classList.remove('active')"></div>
                     <div class="hero_right_video_wrapper">
                         <video onclick="play(event)" class="video" id="video" preload="metadata"
                             poster="./assets/images/poster.png">

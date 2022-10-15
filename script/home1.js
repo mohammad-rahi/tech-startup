@@ -172,140 +172,150 @@ window.onload = () => {
 }
 
 // Choose theme
-document.querySelectorAll('.theme_wrapper div').forEach(theme => {
-    theme.addEventListener('click', () => {
-        let currentTheme;
+const changeTheme = (target) => {
+    document.querySelectorAll(target).forEach(theme => {
+        theme.addEventListener('click', () => {
+            let currentTheme;
 
-        if (localStorage.getItem('dataTheme')) {
-            currentTheme = document.querySelector(`.theme_wrapper [data-theme="${localStorage.getItem('dataTheme')}"]`);
-        }
-        else {
-            currentTheme = document.querySelector(`.theme_wrapper [data-theme="light"]`);
-        }
+            if (localStorage.getItem('dataTheme')) {
+                currentTheme = document.querySelector(`.theme_wrapper [data-theme="${localStorage.getItem('dataTheme')}"]`);
+            }
+            else {
+                currentTheme = document.querySelector(`.theme_wrapper [data-theme="light"]`);
+            }
 
-        let primaryBackground, primaryColor, whiteColor, whiteLight, skeletonColor1, skeletonColor2, dataTheme;
+            let primaryBackground, primaryColor, whiteColor, whiteLight, skeletonColor1, skeletonColor2, dataTheme;
 
-        if (theme.dataset.theme === "light") {
-            primaryBackground = '#f8f9fa';
-            primaryColor = '#000000';
-            whiteColor = '#ffffff';
-            whiteLight = 'rgba(255 255 255 / 65%)';
-            dataTheme = "light";
-            skeletonColor1 = "#dddddd";
-            skeletonColor2 = "#eeeeee";
+            if (theme.dataset.theme === "light") {
+                primaryBackground = '#f8f9fa';
+                primaryColor = '#000000';
+                whiteColor = '#ffffff';
+                whiteLight = 'rgba(255 255 255 / 65%)';
+                dataTheme = "light";
+                skeletonColor1 = "#dddddd";
+                skeletonColor2 = "#eeeeee";
 
-            currentTheme.className = '';
-            theme.classList.add('active');
-        }
-        else {
-            primaryBackground = '#000000';
-            primaryColor = '#f8f9fa';
-            whiteColor = '#111111';
-            whiteLight = 'rgba(0 0 0 / 65%)';
-            dataTheme = "dark";
-            skeletonColor1 = "#222222";
-            skeletonColor2 = "#111111";
+                currentTheme.className = '';
+                theme.classList.add('active');
+            }
+            else {
+                primaryBackground = '#000000';
+                primaryColor = '#f8f9fa';
+                whiteColor = '#111111';
+                whiteLight = 'rgba(0 0 0 / 65%)';
+                dataTheme = "dark";
+                skeletonColor1 = "#222222";
+                skeletonColor2 = "#111111";
 
-            currentTheme.className = '';
-            theme.classList.add('active');
-        }
+                currentTheme.className = '';
+                theme.classList.add('active');
+            }
 
-        document.documentElement.style.setProperty('--primary-background', primaryBackground);
-        document.documentElement.style.setProperty('--primary-color', primaryColor);
-        document.documentElement.style.setProperty('--white-color', whiteColor);
-        document.documentElement.style.setProperty('--white-light', whiteLight);
-        document.documentElement.style.setProperty('--skeleton-color1', skeletonColor1);
-        document.documentElement.style.setProperty('--skeleton-color2', skeletonColor2);
+            document.documentElement.style.setProperty('--primary-background', primaryBackground);
+            document.documentElement.style.setProperty('--primary-color', primaryColor);
+            document.documentElement.style.setProperty('--white-color', whiteColor);
+            document.documentElement.style.setProperty('--white-light', whiteLight);
+            document.documentElement.style.setProperty('--skeleton-color1', skeletonColor1);
+            document.documentElement.style.setProperty('--skeleton-color2', skeletonColor2);
 
-        localStorage.setItem('dataTheme', dataTheme);
-        localStorage.setItem('primaryBackground', primaryBackground);
-        localStorage.setItem('primaryColor', primaryColor);
-        localStorage.setItem('whiteColor', whiteColor);
-        localStorage.setItem('whiteLight', whiteLight);
-        localStorage.setItem('skeletonColor1', skeletonColor1);
-        localStorage.setItem('skeletonColor2', skeletonColor2);
+            localStorage.setItem('dataTheme', dataTheme);
+            localStorage.setItem('primaryBackground', primaryBackground);
+            localStorage.setItem('primaryColor', primaryColor);
+            localStorage.setItem('whiteColor', whiteColor);
+            localStorage.setItem('whiteLight', whiteLight);
+            localStorage.setItem('skeletonColor1', skeletonColor1);
+            localStorage.setItem('skeletonColor2', skeletonColor2);
 
-    });
-})
+        });
+    })
+}
+
+changeTheme('.theme_wrapper div');
+changeTheme('.mobile_theme_wrapper div');
 
 // Choose color
-document.querySelectorAll('.color_wrapper div').forEach(color => {
-    color.addEventListener('click', () => {
+const changeColor = (target) => {
+    document.querySelectorAll(target).forEach(color => {
+        color.addEventListener('click', () => {
 
-        let currentColor = document.querySelector(`.color_wrapper [data-color="${localStorage.getItem('dataColor')}"]`);
+            let currentColor = document.querySelector(`.color_wrapper [data-color="${localStorage.getItem('dataColor')}"]`);
 
 
-        if (color.dataset.color === "sky") {
-            let secondary1 = 'rgb(69, 83, 157)';
-            let secondary2 = 'rgb(76, 179, 198)';
+            if (color.dataset.color === "sky") {
+                let secondary1 = 'rgb(69, 83, 157)';
+                let secondary2 = 'rgb(76, 179, 198)';
 
-            let gradient1 = 'rgb(69, 83, 157, .2)';
-            let gradient2 = 'rgb(76, 179, 198, .2)';
+                let gradient1 = 'rgb(69, 83, 157, .2)';
+                let gradient2 = 'rgb(76, 179, 198, .2)';
 
-            document.documentElement.style.setProperty('--secondary-color1', secondary1);
-            document.documentElement.style.setProperty('--secondary-color2', secondary2);
-            document.documentElement.style.setProperty('--gradient-color1', gradient1);
-            document.documentElement.style.setProperty('--gradient-color2', gradient2);
+                document.documentElement.style.setProperty('--secondary-color1', secondary1);
+                document.documentElement.style.setProperty('--secondary-color2', secondary2);
+                document.documentElement.style.setProperty('--gradient-color1', gradient1);
+                document.documentElement.style.setProperty('--gradient-color2', gradient2);
 
-            localStorage.setItem('secondary1', secondary1);
-            localStorage.setItem('secondary2', secondary2);
-            localStorage.setItem('gradient1', gradient1);
-            localStorage.setItem('gradient2', gradient2);
+                localStorage.setItem('secondary1', secondary1);
+                localStorage.setItem('secondary2', secondary2);
+                localStorage.setItem('gradient1', gradient1);
+                localStorage.setItem('gradient2', gradient2);
 
-            localStorage.setItem('dataColor', 'sky');
+                localStorage.setItem('dataColor', 'sky');
 
-            currentColor.className = '';
-            color.classList.add('active');
+                currentColor.className = '';
+                color.classList.add('active');
 
-        }
-        else if (color.dataset.color === "rosy") {
-            let secondary1 = '#504c89';
-            let secondary2 = '#b61ec9';
+            }
+            else if (color.dataset.color === "rosy") {
+                let secondary1 = '#504c89';
+                let secondary2 = '#b61ec9';
 
-            let gradient1 = 'rgb(80, 76, 137, .2)';
-            let gradient2 = 'rgb(182, 30, 201, .2)';
+                let gradient1 = 'rgb(80, 76, 137, .2)';
+                let gradient2 = 'rgb(182, 30, 201, .2)';
 
-            document.documentElement.style.setProperty('--secondary-color1', secondary1);
-            document.documentElement.style.setProperty('--secondary-color2', secondary2);
-            document.documentElement.style.setProperty('--gradient-color1', gradient1);
-            document.documentElement.style.setProperty('--gradient-color2', gradient2);
+                document.documentElement.style.setProperty('--secondary-color1', secondary1);
+                document.documentElement.style.setProperty('--secondary-color2', secondary2);
+                document.documentElement.style.setProperty('--gradient-color1', gradient1);
+                document.documentElement.style.setProperty('--gradient-color2', gradient2);
 
-            localStorage.setItem('secondary1', secondary1);
-            localStorage.setItem('secondary2', secondary2);
-            localStorage.setItem('gradient1', gradient1);
-            localStorage.setItem('gradient2', gradient2);
+                localStorage.setItem('secondary1', secondary1);
+                localStorage.setItem('secondary2', secondary2);
+                localStorage.setItem('gradient1', gradient1);
+                localStorage.setItem('gradient2', gradient2);
 
-            localStorage.setItem('dataColor', 'rosy');
+                localStorage.setItem('dataColor', 'rosy');
 
-            currentColor.className = '';
-            color.classList.add('active');
+                currentColor.className = '';
+                color.classList.add('active');
 
-        }
-        else {
-            let secondary1 = '#B1B2FF';
-            let secondary2 = '#AAC4FF';
+            }
+            else {
+                let secondary1 = '#B1B2FF';
+                let secondary2 = '#AAC4FF';
 
-            let gradient1 = 'rgb(177 178 255 / 30%)';
-            let gradient2 = 'rgb(170 196 255 / 30%)';
+                let gradient1 = 'rgb(177 178 255 / 30%)';
+                let gradient2 = 'rgb(170 196 255 / 30%)';
 
-            document.documentElement.style.setProperty('--secondary-color1', secondary1);
-            document.documentElement.style.setProperty('--secondary-color2', secondary2);
-            document.documentElement.style.setProperty('--gradient-color1', gradient1);
-            document.documentElement.style.setProperty('--gradient-color2', gradient2);
+                document.documentElement.style.setProperty('--secondary-color1', secondary1);
+                document.documentElement.style.setProperty('--secondary-color2', secondary2);
+                document.documentElement.style.setProperty('--gradient-color1', gradient1);
+                document.documentElement.style.setProperty('--gradient-color2', gradient2);
 
-            localStorage.setItem('secondary1', secondary1);
-            localStorage.setItem('secondary2', secondary2);
-            localStorage.setItem('gradient1', gradient1);
-            localStorage.setItem('gradient2', gradient2);
+                localStorage.setItem('secondary1', secondary1);
+                localStorage.setItem('secondary2', secondary2);
+                localStorage.setItem('gradient1', gradient1);
+                localStorage.setItem('gradient2', gradient2);
 
-            localStorage.setItem('dataColor', 'purple');
+                localStorage.setItem('dataColor', 'purple');
 
-            currentColor.className = '';
-            color.classList.add('active');
+                currentColor.className = '';
+                color.classList.add('active');
 
-        }
-    });
-})
+            }
+        });
+    })
+};
+
+changeColor('.color_wrapper div');
+changeColor('.mobile_color_wrapper div');
 
 const playBtnAnimation = (event) => {
     const x = event.offsetX;
