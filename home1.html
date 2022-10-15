@@ -198,12 +198,46 @@
             </div>
             <div class="hero_right">
                 <div class="hero_right_video wow animate__animated animate__fadeInUp" data-wow-delay="2s">
-                    <div class="play_btn">
+                    <div class="play_btn" onclick="document.querySelector('.hero_video').classList.add('active')">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
                         </svg>
+                    </div>
+                </div>
+
+                <div class="hero_video">
+                    <div class="hero_video_overlay" onclick="document.querySelector('.hero_video').classList.remove('active')"></div>
+                    <div class="hero_right_video_wrapper">
+                        <video onclick="play(event)" class="video" id="video" preload="metadata"
+                            poster="./assets/images/poster.png">
+                            <source src="./assets/videos/video.mp4" type="video/mp4">
+                            </source>
+                        </video>
+
+                        <div class="video_controls">
+                            <div class="controls_wrapper">
+                                <label for="video_range" class="video_range_label">
+                                    <input type="range" name="" id="video_range" min="0" max="100" value="0" />
+                                    <small><span id="currentTime">0</span>/<span id="durration">0</span></small>
+                                </label>
+
+                                <div class="controls">
+                                    <button onclick="rewind(event)"><i class="fa fa-fast-backward"></i></button>
+                                    <button onclick="play(event)"><i class="fa fa-play"></i><i
+                                            class="fa fa-pause"></i></button>
+
+                                    <!-- <div class="timeline">
+                                        <div class="bar">
+                                            <div class="inner"></div>
+                                        </div>
+                                    </div> -->
+                                    <button onclick="forward(event)"><i class="fa fa-fast-forward"></i></button>
+                                    <button onclick="fullScreen(event)"><i class="fa fa-expand"></i></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -526,7 +560,7 @@
                 </div>
             </div>
 
-            <ul class="circles services_circles">
+            <ul class="circles">
                 <li></li>
                 <li></li>
                 <li></li>
@@ -551,39 +585,24 @@
             </ul>
         </section>
 
-        <section class="blog_section" id="blog">
-            <div class="section_header service_header wow animate__animated animate__fadeInUp wrapper">
+        <section class="blog_section wrapper" id="blog">
+            <div class="section_header service_header wow animate__animated animate__fadeInUp">
                 <h4>Blogs</h4>
                 <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
             </div>
 
             <div class="blog_container">
-                <div class="wrapper blog_wrapper">
-                    <h2>Loading...</h2>
-                </div>
+                <div class="blog_wrapper"></div>
+
                 <a href="./blog.html" class="blog_btn btn">View more blogs <svg xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
                     </svg></a>
             </div>
-        </section>
 
-        <section class="about_section section wrapper" id="about">
-            <div class="section_header about_header wow animate__animated animate__fadeInUp">
-                <h4>About</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quae molestias nobis a temporibus
-                    quisquam, officia dolore ipsum autem sint delectus incidunt sunt fugiat assumenda suscipit libero
-                    quod reiciendis aliquid?</p>
-                <h2>Our Team</h2>
-            </div>
-
-            <div class="about_card_wrapper">
-                <h2>Loading...</h2>
-            </div>
-
-            <ul class="circles about_circles">
+            <ul class="circles blog_circles">
                 <li></li>
                 <li></li>
                 <li></li>
@@ -607,6 +626,30 @@
                 <li></li> -->
             </ul>
         </section>
+
+        <section class="about_section section wrapper" id="about">
+            <div class="section_header about_header wow animate__animated animate__fadeInUp">
+                <h4>About</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quae molestias nobis a temporibus
+                    quisquam, officia dolore ipsum autem sint delectus incidunt sunt fugiat assumenda suscipit libero
+                    quod reiciendis aliquid?</p>
+                <h2>Our Team</h2>
+            </div>
+
+            <div class="about_card_wrapper">
+                <div class="about_skeleton"></div>
+                <div class="about_skeleton"></div>
+                <div class="about_skeleton"></div>
+            </div>
+        </section>
+
+        <!-- <section class="testimonial_section section">
+            <div class="section_header service_header wow animate__animated animate__fadeInUp">
+                <h4>Testimonial</h4>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+            </div>
+        </section> -->
     </main>
 
     <!--===== Footer =====-->

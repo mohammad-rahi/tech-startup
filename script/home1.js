@@ -6,26 +6,16 @@ window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.querySelector(".navbar_header").style.background = "var(--white-light)";
+        document.querySelector(".navbar_header").style.background = "var(--white-color)";
 
         if (window.innerWidth > 800) {
             document.querySelector(".navbar_header").style.backdropFilter = "blur(12px)";
         }
-        else {
-            if (document.querySelector('.navbar_menu').classList.contains('active')) {
-                document.querySelector(".navbar_header").style.backdropFilter = "unset";
-            }
-            else {
-                document.querySelector(".navbar_header").style.backdropFilter = "blur(12px)";
-            }
-        }
-
     } else {
         document.querySelector(".navbar_header").style.background = "unset";
         document.querySelector(".navbar_header").style.backdropFilter = "unset";
     }
 }
-
 
 // Services Scroll Horizontall
 const serviceWrapper = document.querySelector(".service_wrapper");
@@ -51,7 +41,7 @@ serviceWrapper.addEventListener("wheel", function (e) {
 let blogs = fetch('https://jsonplaceholder.typicode.com/photos')
     .then(res => res.json())
     .then(data => {
-        document.querySelector('.blog_wrapper').innerHTML = '';
+        // document.querySelector('.blog_wrapper').innerHTML = '';
         data.slice(0, 8).map(photo => {
             let blog = `<div class="blog">
             <figure style="background-image: url('${photo.url}');" class="blog_image"></figure>
@@ -67,9 +57,16 @@ let blogs = fetch('https://jsonplaceholder.typicode.com/photos')
         </div>`;
             document.querySelector('.blog_wrapper').innerHTML += blog;
         })
+    })
+    .catch(err => {
+        document.querySelector('.blog_wrapper').innerHTML += `<div class="blog_skeleton"></div>
+        <div class="blog_skeleton"></div>
+        <div class="blog_skeleton"></div>
+        <div class="blog_skeleton"></div>`;
+
     });
 
-// Fetch users fron jsonplaceholder for our teams
+// Fetch users from jsonplaceholder for our teams
 let users = fetch('https://jsonplaceholder.typicode.com/users')
     .then(res => res.json())
     .then(data => {
@@ -128,6 +125,7 @@ let users = fetch('https://jsonplaceholder.typicode.com/users')
         })
     });
 
+// About more options 
 const openAboutMore = (index) => {
     document.querySelectorAll('.about_card_overlay')[index].classList.add('active')
 }
@@ -140,13 +138,11 @@ const closeAboutMore = (index) => {
 const openMenu = () => {
     document.querySelector('.navbar_menu').classList.add('active');
     document.querySelector('.navbar_overlay').classList.add('active');
-    document.querySelector('.navbar_header').style.backdropFilter = "unset";
 }
 
 const closeMenu = () => {
     document.querySelector('.navbar_menu').classList.remove('active');
     document.querySelector('.navbar_overlay').classList.remove('active');
-    document.querySelector('.navbar_header').style.backdropFilter = "blur(12px)";
 }
 
 // Window onload
@@ -163,6 +159,8 @@ window.onload = () => {
     document.documentElement.style.setProperty('--primary-color', localStorage.getItem('primaryColor'));
     document.documentElement.style.setProperty('--white-color', localStorage.getItem('whiteColor'));
     document.documentElement.style.setProperty('--white-light', localStorage.getItem('whiteLight'));
+    document.documentElement.style.setProperty('--skeleton-color1', localStorage.getItem('skeletonColor1'));
+    document.documentElement.style.setProperty('--skeleton-color2', localStorage.getItem('skeletonColor2'));
 
 
     if (localStorage.getItem('dataColor')) {
@@ -185,7 +183,7 @@ document.querySelectorAll('.theme_wrapper div').forEach(theme => {
             currentTheme = document.querySelector(`.theme_wrapper [data-theme="light"]`);
         }
 
-        let primaryBackground, primaryColor, whiteColor, whiteLight, dataTheme;
+        let primaryBackground, primaryColor, whiteColor, whiteLight, skeletonColor1, skeletonColor2, dataTheme;
 
         if (theme.dataset.theme === "light") {
             primaryBackground = '#f8f9fa';
@@ -193,21 +191,11 @@ document.querySelectorAll('.theme_wrapper div').forEach(theme => {
             whiteColor = '#ffffff';
             whiteLight = 'rgba(255 255 255 / 65%)';
             dataTheme = "light";
-
-            // document.documentElement.style.setProperty('--primary-background', primaryBackground);
-            // document.documentElement.style.setProperty('--primary-color', primaryColor);
-            // document.documentElement.style.setProperty('--white-color', whiteColor);
-            // document.documentElement.style.setProperty('--white-light', whiteLight);
-
-            // localStorage.setItem('dataTheme', 'light');
-            // localStorage.setItem('primaryBackground', primaryBackground);
-            // localStorage.setItem('primaryColor', primaryColor);
-            // localStorage.setItem('whiteColor', whiteColor);
-            // localStorage.setItem('whiteLight', whiteLight);
+            skeletonColor1 = "#dddddd";
+            skeletonColor2 = "#eeeeee";
 
             currentTheme.className = '';
             theme.classList.add('active');
-
         }
         else {
             primaryBackground = '#000000';
@@ -215,17 +203,8 @@ document.querySelectorAll('.theme_wrapper div').forEach(theme => {
             whiteColor = '#111111';
             whiteLight = 'rgba(0 0 0 / 65%)';
             dataTheme = "dark";
-
-            // document.documentElement.style.setProperty('--primary-background', primaryBackground);
-            // document.documentElement.style.setProperty('--primary-color', primaryColor);
-            // document.documentElement.style.setProperty('--white-color', whiteColor);
-            // document.documentElement.style.setProperty('--white-light', whiteLight);
-
-            // localStorage.setItem('dataTheme', 'dark');
-            // localStorage.setItem('primaryBackground', primaryBackground);
-            // localStorage.setItem('primaryColor', primaryColor);
-            // localStorage.setItem('whiteColor', whiteColor);
-            // localStorage.setItem('whiteLight', whiteLight);
+            skeletonColor1 = "#222222";
+            skeletonColor2 = "#111111";
 
             currentTheme.className = '';
             theme.classList.add('active');
@@ -235,12 +214,16 @@ document.querySelectorAll('.theme_wrapper div').forEach(theme => {
         document.documentElement.style.setProperty('--primary-color', primaryColor);
         document.documentElement.style.setProperty('--white-color', whiteColor);
         document.documentElement.style.setProperty('--white-light', whiteLight);
+        document.documentElement.style.setProperty('--skeleton-color1', skeletonColor1);
+        document.documentElement.style.setProperty('--skeleton-color2', skeletonColor2);
 
         localStorage.setItem('dataTheme', dataTheme);
         localStorage.setItem('primaryBackground', primaryBackground);
         localStorage.setItem('primaryColor', primaryColor);
         localStorage.setItem('whiteColor', whiteColor);
         localStorage.setItem('whiteLight', whiteLight);
+        localStorage.setItem('skeletonColor1', skeletonColor1);
+        localStorage.setItem('skeletonColor2', skeletonColor2);
 
     });
 })
@@ -337,3 +320,62 @@ const playBtnAnimation = (event) => {
 // });
 // document.querySelector('.hero_right_video').addEventListener('mouseenter', playBtnAnimation);
 // document.querySelector('.hero_right_video').addEventListener('mouseleave', playBtnAnimation);
+
+// Select the HTML5 video
+const video = document.querySelector("#video")
+// set the pause button to display:none by default
+document.querySelector(".fa-pause").style.display = "none"
+// update the progress bar
+video.addEventListener("timeupdate", () => {
+    let curr = (video.currentTime / video.duration) * 100
+    if (video.ended) {
+        document.querySelector(".fa-play").style.display = "block"
+        document.querySelector(".fa-pause").style.display = "none"
+    }
+    document.querySelector('input[type="range"]').value = `${curr}`;
+    document.querySelector('#currentTime').innerText = (video.currentTime / 60).toFixed(2);
+    document.querySelector('#durration').innerText = Math.abs(((video.duration / 60) - .28).toFixed(2));
+})
+
+document.querySelector('input[type="range"]').addEventListener('change', () => {
+    video.currentTime = document.querySelector('input[type="range"]').value;
+})
+
+// pause or play the video
+const play = (e) => {
+    // Condition when to play a video
+    if (video.paused) {
+        document.querySelector(".fa-play").style.display = "none"
+        document.querySelector(".fa-pause").style.display = "block"
+        video.play()
+    }
+    else {
+        document.querySelector(".fa-play").style.display = "block"
+        document.querySelector(".fa-pause").style.display = "none"
+        video.pause()
+    }
+}
+// trigger fullscreen
+const fullScreen = (e) => {
+    e.preventDefault()
+    video.requestFullscreen()
+}
+// download the video
+const download = (e) => {
+    e.preventDefault()
+    let a = document.createElement('a')
+    a.href = video.src
+    a.target = "_blank"
+    a.download = ""
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+}
+// rewind the current time
+const rewind = (e) => {
+    video.currentTime = video.currentTime - ((video.duration / 100) * 5)
+}
+// forward the current time
+const forward = (e) => {
+    video.currentTime = video.currentTime + ((video.duration / 100) * 5)
+}

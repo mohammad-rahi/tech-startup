@@ -3,8 +3,6 @@
 
 /*===== Global Variables =====*/
 :root {
-    --primary-background: ;
-    
     --primary-background: #f8f9fa;
     --primary-color: #000000;
     --white-color: #ffffff;
@@ -14,8 +12,13 @@
     --secondary-color2: rgb(76, 179, 198);
     --gradient-color1: rgb(69, 83, 157, .2);
     --gradient-color2: rgb(76, 179, 198, .2);
+
+    --skeleton-color1: #dddddd;
+    --skeleton-color2: #eeeeee;
+
     --shadow-dark-color: rgba(0 0 0 / 20%);
     --shadow-light-color: rgba(0 0 0 / 10%);
+
     --transition: all 150ms ease-out;
 }
 
@@ -30,6 +33,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+::selection{
+    background: var(--secondary-color2);
+    color: var(--primary-color);
 }
 
 ::-webkit-scrollbar {
