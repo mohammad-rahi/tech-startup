@@ -3,7 +3,7 @@
 
 /*===== Global Variables =====*/
 :root {
-    --primary-background: #f8f9fa;
+    /* --primary-background: #f8f9fa;
     --primary-color: #000000;
     --white-color: #ffffff;
     --white-light: rgba(255 255 255 / 65%);
@@ -14,7 +14,7 @@
     --gradient-color2: rgb(76, 179, 198, .2);
 
     --skeleton-color1: #dddddd;
-    --skeleton-color2: #eeeeee;
+    --skeleton-color2: #eeeeee; */
 
     --shadow-dark-color: rgba(0 0 0 / 20%);
     --shadow-light-color: rgba(0 0 0 / 10%);
@@ -22,8 +22,45 @@
     --transition: all 150ms ease-out;
 }
 
-@media (prefired-color-scheme: dark) {
-    
+/*===== Themes =====*/
+.light {
+    --primary-background: #f8f9fa;
+    --primary-color: #000000;
+    --white-color: #ffffff;
+    --white-light: rgba(255 255 255 / 65%);
+    --skeleton-color1: #dddddd;
+    --skeleton-color2: #eeeeee;
+}
+
+.dark {
+    --primary-background: #000000;
+    --primary-color: #f8f9fa;
+    --white-color: #111111;
+    --white-light: rgba(0 0 0 / 65%);
+    --skeleton-color1: #222222;
+    --skeleton-color2: #111111;
+}
+
+/*===== Colors =====*/
+.sky {
+    --secondary-color1: rgb(69, 83, 157);
+    --secondary-color2: rgb(76, 179, 198);
+    --gradient-color1: rgb(69, 83, 157, .2);
+    --gradient-color2: rgb(76, 179, 198, .2);
+}
+
+.purple {
+    --secondary-color1: #B1B2FF;
+    --secondary-color2: #AAC4FF;
+    --gradient-color1: rgb(177 178 255 / 30%);
+    --gradient-color2: rgb(170 196 255 / 30%);
+}
+
+.rosy {
+    --secondary-color1: #504c89;
+    --secondary-color2: #b61ec9;
+    --gradient-color1: rgb(80, 76, 137, .2);
+    --gradient-color2: rgb(182, 30, 201, .2);
 }
 
 /*===== Global Styles =====*/
@@ -35,7 +72,7 @@
     box-sizing: border-box;
 }
 
-::selection{
+::selection {
     background: var(--secondary-color2);
     color: var(--primary-color);
 }
