@@ -150,9 +150,14 @@ window.onload = () => {
     document.querySelector('.loading').style.display = "none";
 
     if (localStorage.getItem('dataColor')) {
-        document.querySelector(`.color_wrapper [data-color="${localStorage.getItem('dataColor')}"]`).classList.add('active');
-
         document.querySelector(`.mobile_color_wrapper [data-color="${localStorage.getItem('dataColor')}"]`).classList.add('active');
+
+        document.querySelector(`.color_wrapper [data-color="${localStorage.getItem('dataColor')}"]`).classList.add('active');
+    }
+    else {
+        document.querySelector(`.mobile_color_wrapper [data-color="sky"]`).classList.add('active');
+
+        document.querySelector(`.color_wrapper [data-color="sky"]`).classList.add('active');
     }
 
     if (localStorage.getItem('purple')) {
@@ -171,16 +176,21 @@ window.onload = () => {
         document.body.classList.remove('purple');
     }
 
-    document.querySelector(`.theme_wrapper [data-theme="${localStorage.getItem('dataTheme')}"]`).classList.add('active');
-    document.querySelector(`.mobile_theme_wrapper [data-theme="${localStorage.getItem('dataTheme')}"]`).classList.add('active');
-
     if (localStorage.getItem('dataTheme') === "dark") {
         document.body.classList.add('dark');
         document.body.classList.remove('light');
+
+        document.querySelector(`.mobile_theme_wrapper [data-theme="dark"]`).classList.add('active');
+        document.querySelector(`.theme_wrapper [data-theme="dark"]`).classList.add('active');
+
     }
     else {
         document.body.classList.add('light');
         document.body.classList.remove('dark');
+
+        document.querySelector(`.theme_wrapper [data-theme="light"]`).classList.add('active');
+        document.querySelector(`.mobile_theme_wrapper [data-theme="light"]`).classList.add('active');
+
     }
 
 }
@@ -189,18 +199,18 @@ window.onload = () => {
 const changeTheme = (target) => {
     document.querySelectorAll(`${target} div`).forEach(theme => {
         theme.addEventListener('click', () => {
-            let currentTheme;
+            let prevTheme;
 
             if (localStorage.getItem('dataTheme')) {
-                currentTheme = document.querySelector(`${target} [data-theme="${localStorage.getItem('dataTheme')}"]`);
+                prevTheme = document.querySelector(`${target} [data-theme="${localStorage.getItem('dataTheme')}"]`);
             }
             else {
-                currentTheme = document.querySelector(`${target} [data-theme="light"]`);
+                prevTheme = document.querySelector(`${target} [data-theme="light"]`);
             }
 
             if (theme.dataset.theme === "light") {
 
-                currentTheme.className = '';
+                prevTheme.classList.remove('active');
                 theme.classList.add('active');
 
                 localStorage.setItem('dataTheme', 'light');
@@ -210,7 +220,7 @@ const changeTheme = (target) => {
 
             }
             else {
-                currentTheme.className = '';
+                prevTheme.classList.remove('active');
                 theme.classList.add('active');
 
                 localStorage.setItem('dataTheme', 'dark');
@@ -230,7 +240,7 @@ const changeColor = (target) => {
     document.querySelectorAll(`${target} div`).forEach(color => {
         color.addEventListener('click', () => {
 
-            let currentColor = document.querySelector(`${target} [data-color="${localStorage.getItem('dataColor')}"]`);
+            let prevColor = document.querySelector(`${target} [data-color="${localStorage.getItem('dataColor')}"]`);
 
 
             if (color.dataset.color === "sky") {
@@ -252,7 +262,7 @@ const changeColor = (target) => {
 
                 localStorage.setItem('dataColor', 'sky');
 
-                currentColor.className = '';
+                prevColor.classList.remove('active');
                 color.classList.add('active');
 
                 document.body.classList.add('sky');
@@ -264,7 +274,7 @@ const changeColor = (target) => {
 
                 localStorage.setItem('dataColor', 'rosy');
 
-                currentColor.className = '';
+                prevColor.classList.remove('active');
                 color.classList.add('active');
 
                 document.body.classList.add('rosy');
@@ -276,7 +286,7 @@ const changeColor = (target) => {
 
                 localStorage.setItem('dataColor', 'purple');
 
-                currentColor.className = '';
+                prevColor.classList.remove('active');
                 color.classList.add('active');
 
                 document.body.classList.add('purple');
