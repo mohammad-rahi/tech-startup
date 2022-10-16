@@ -9,6 +9,54 @@
     z-index: 100;
 }
 
+.loading>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 8rem;
+}
+
+.loading_logo {
+    width: 80px;
+    aspect-ratio: 1;
+    background: url('../assets/images/startup_logo.svg') no-repeat center/cover;
+}
+
+.loading_animated {
+    height: 3px;
+    width: 200px;
+    margin-top: 2rem;
+    background-color: #ccc;
+    position: relative;
+    overflow: hidden;
+}
+
+.loading_animated>div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    background: var(--secondary-color2);
+    animation: loading_animaiton 700ms infinite linear alternate;
+}
+
+@keyframes loading_animaiton {
+    0% {
+        right: 120%;
+        opacity: .5;
+    }
+
+    25%{
+        opacity: 1;
+    }
+
+    100% {
+        right: -20%;
+        opacity: .5;
+    }
+}
+
 /*===== Header =====*/
 .navbar_header {
     /* background: #B1B2FF; */
