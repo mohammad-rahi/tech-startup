@@ -145,6 +145,7 @@ h6 {
 .section_header h2 {
     font-size: 4rem;
     margin: 1rem 0;
+    text-transform: capitalize;
     color: var(--secondary-color2);
 }
 

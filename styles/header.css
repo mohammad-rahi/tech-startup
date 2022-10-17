@@ -125,6 +125,7 @@
     padding: .5rem;
     border-radius: .5rem;
     background: var(--gradient-color2);
+    border: 1px solid var(--secondary-color2);
     backdrop-filter: blur(12px);
     box-shadow: 2px 2px 16px rgba(0 0 0 / 20%);
     opacity: 0;

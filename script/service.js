@@ -39,7 +39,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 
             let service = `<div class="more_service_card">
             <h3 class="more_service_title">${service_title}</h3>
-            <a href="./service-details.html?id=${id}">
+            <a href="./service-details.html">
                 <figure class="more_service_photo" style="background-color: rgb(${rand1} ${rand2} ${rand3})">
                 </figure>
             </a>
