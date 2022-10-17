@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/footer.css">
-    <link rel="stylesheet" href="./styles/blog.css">
+    <link rel="stylesheet" href="./styles/service-detials.css">
 </head>
 
 <body class="light sky" id="top">
@@ -41,7 +41,7 @@
             <div class="navbar_menu_wrapper">
                 <ul class="navbar_menu">
                     <li class="navbar_list">
-                        <a class="navbar_link" href="product.html" onclick="closeMenu()">Products</a>
+                        <a class="navbar_link" href="./product.html" onclick="closeMenu()">Products</a>
                         <ul class="navbar_dropdown_menu">
                             <li class="navbar_dropdown_list">
                                 <a href="#products" class="navbar_dropdown_link">
@@ -228,35 +228,100 @@
 
     <!--===== Content =====-->
     <main>
-        <section class="blog_section wrapper" id="blog">
-            <div class="section_header service_header wow animate__animated animate__fadeInUp">
-                <h4>Blogs</h4>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+        <section class="productDetails_section">
+            <div class="section_header wow animate__animated animate__fadeInUp wrapper">
+                <h2 class="serviceDetails_title">
+                    <div class="productDetails_title_skeleton"></div>
+                </h2>
             </div>
 
-            <div class="blog_container">
-                <div class="blog_wrapper">
-                    <div class="blog_skeleton"></div>
-                    <div class="blog_skeleton"></div>
-                    <div class="blog_skeleton"></div>
-                    <div class="blog_skeleton"></div>
+            <div class="productDetails_wrapper">
+                <div class="wrapper">
+                    <div class="wrapper_left">
+                        <img id="productDetails_image" class="loading_skeleton" />
+                    </div>
+                    <div class="wrapper_right">
+                        <div>
+                            <div class="wrapper_right_top">
+                                <div>
+                                    <h1 class="productDetails_title_small">
+                                        <div class="title_small_skeleton"></div>
+                                    </h1>
+                                    <hr class="my-4 hidden xl:block">
+                                    <div class="productDetails_top">
+                                        <div class="productDetails_top_skeleton"></div>
+                                    </div>
+                                </div>
+                                <div class="wrapper_right_actions">
+                                    <div class="actions_skeleton"></div>
+                                </div>
+                            </div>
+                            <hr class="my-4">
+                            <div class="productDetails_bottom">
+                                <div class="productDetails_bottom_skeleton"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="products_title">Releted Products</h2>
+
+            <div class="scrollable_products_wrapper wrapper">
+                <h3>Top porducts in electronics for you</h3>
+
+                <a href="javascript:void(0)" class="scroll_left_btn" onclick="productScroll(0, 'left')">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </a>
+
+                <div class="scrollable_products">
+                    <div class="scrollable_product_skeleton"></div>
+                    <div class="scrollable_product_skeleton"></div>
+                    <div class="scrollable_product_skeleton"></div>
+                    <div class="scrollable_product_skeleton"></div>
+                    <div class="scrollable_product_skeleton"></div>
+                    <div class="scrollable_product_skeleton"></div>
+                    <div class="scrollable_product_skeleton"></div>
                 </div>
 
+                <a href="javascript:void(0)" class="scroll_right_btn" onclick="productScroll(0, 'right')">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </a>
             </div>
 
-            <ul class="circles blog_circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            <div class="scrollable_products_wrapper wrapper">
+                <h3>Top porducts in electronics for you</h3>
+
+                <a href="javascript:void(0)" class="scroll_left_btn" onclick="productScroll(1, 'left')">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </a>
+
+                <div class="scrollable_products">
+                    <div class="scrollable_product_skeleton"></div>
+                    <div class="scrollable_product_skeleton"></div>
+                    <div class="scrollable_product_skeleton"></div>
+                    <div class="scrollable_product_skeleton"></div>
+                    <div class="scrollable_product_skeleton"></div>
+                    <div class="scrollable_product_skeleton"></div>
+                    <div class="scrollable_product_skeleton"></div>
+                </div>
+
+                <a href="javascript:void(0)" class="scroll_right_btn" onclick="productScroll(1, 'right')">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </a>
+            </div>
         </section>
     </main>
 
@@ -342,8 +407,8 @@
         integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <script src="./script/service-details.js"></script>
     <script src="./script/header.js"></script>
-    <script src="./script/blog.js"></script>
 </body>
 
 </html>

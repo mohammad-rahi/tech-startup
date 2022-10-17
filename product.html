@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/footer.css">
-    <link rel="stylesheet" href="./styles/home1.css">
+    <link rel="stylesheet" href="./styles/product.css">
 </head>
 
 <body class="light sky" id="top">
@@ -34,7 +34,7 @@
     <!--===== Header =====-->
     <header class="navbar_header">
         <nav class="navbar_nav wrapper">
-            <a href="#home" class="navbar_logo">
+            <a href="./index.html" class="navbar_logo">
                 <img src="./assets/images/startup_logo.svg" loading="lazy" /> Tech Startup
             </a>
 
@@ -228,117 +228,6 @@
 
     <!--===== Content =====-->
     <main>
-        <section class="hero_section section wrapper" id="home">
-            <div class="hero_left">
-                <h1 class="hero_left_title  wow animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit quos eveniet.</h1>
-                <blockquote class="wow animate__animated animate__fadeInUp" data-wow-delay="1s">Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Quos, eveniet quisquam tempore.
-                </blockquote>
-                <a href="#" class="btn wow animate__animated animate__zoomIn" data-wow-delay="1.5s">Get Started <svg
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
-                    </svg></a>
-            </div>
-            <div class="hero_right">
-                <div class="hero_right_video wow animate__animated animate__fadeInUp" data-wow-delay="2s">
-                    <div class="play_btn" onclick="document.querySelector('.hero_video').classList.add('active')">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="hero_video">
-                    <div class="hero_video_overlay"
-                        onclick="document.querySelector('.hero_video').classList.remove('active')"></div>
-                    <div class="hero_right_video_wrapper">
-                        <video onclick="play(event)" class="video" id="video" preload="metadata"
-                            poster="./assets/images/poster.png">
-                            <source src="./assets/videos/video.mp4" type="video/mp4">
-                            </source>
-                        </video>
-
-                        <div class="video_controls">
-                            <div class="controls_wrapper">
-                                <label for="video_range" class="video_range_label">
-                                    <input type="range" name="" id="video_range" min="0" max="100" value="0" />
-                                    <small><span id="currentTime">0</span>/<span id="durration">0</span></small>
-                                </label>
-
-                                <div class="controls">
-                                    <button onclick="rewind(event)"><i class="fa fa-fast-backward"></i></button>
-                                    <button onclick="play(event)"><i class="fa fa-play"></i><i
-                                            class="fa fa-pause"></i></button>
-
-                                    <!-- <div class="timeline">
-                                        <div class="bar">
-                                            <div class="inner"></div>
-                                        </div>
-                                    </div> -->
-                                    <button onclick="forward(event)"><i class="fa fa-fast-forward"></i></button>
-                                    <button onclick="fullScreen(event)"><i class="fa fa-expand"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hero_right_social">
-                    <ul>
-                        <li>
-                            <a href="#" data-text="LinkedIn">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-text="Twitter">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-text="Instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-text="Dribble">
-                                <i class="fa-solid fa-basketball"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </section>
-
         <section class="product_section section" id="products">
             <div class="section_header wow animate__animated animate__fadeInUp wrapper">
                 <h4>Product</h4>
@@ -347,6 +236,9 @@
             </div>
 
             <div class="product_container wow animate__animated animate__fadeInUp">
+
+                <h2 class="products_title">Featured Products</h2>
+
                 <div class="products_wrapper wrapper">
                     <div class="product">
                         <div class="product_image_wrapper">
@@ -510,152 +402,96 @@
                     </div>
                 </div>
 
-                <a href="./product.html" class="product_btn blog_btn btn">View more products <svg xmlns="http://www.w3.org/2000/svg"
-                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
-                </svg></a>
-            </div>
-        </section>
-
-        <section class="service_section section wrapper" id="services">
-            <div class="section_header wow animate__animated animate__fadeInUp">
-                <h4>Services</h4>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
-            </div>
-
-            <div class="service_wrapper">
-                <div class="service_card">
-                    <div class="service">
-                        <div class="service_info">
-                            <h2>Data Analysis</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, laboriosam? Atque,
-                                quo
-                                aspernatur inventore veniam fuga labore necessitatibus quas quis soluta saepe
-                                voluptas
-                                debitis nulla, dolore, aperiam tempora architecto repellat!</p>
-                            <a href="#" class="btn">Read more <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
-                                </svg>
-                            </a>
-                        </div>
-                        <figure class="service_image">
-                            <div class="service_image_overlay">
-                                <h2>Data Analysis</h2>
-
-                                <a href="#" class="btn">Read more <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
-                                    </svg></a>
-                            </div>
-                        </figure>
-                    </div>
-                </div>
-                <div class="service_card">
-                    <div class="service">
-                        <div class="service_info">
-                            <h2>Web Development</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, laboriosam? Atque,
-                                quo
-                                aspernatur inventore veniam fuga labore necessitatibus quas quis soluta saepe
-                                voluptas
-                                debitis nulla, dolore, aperiam tempora architecto repellat!</p>
-                            <a href="#" class="btn">Read more <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
-                                </svg>
-                            </a>
-                        </div>
-                        <figure class="service_image">
-                            <div class="service_image_overlay">
-                                <h2>Web Development</h2>
-                                <a href="#" class="btn">Read more <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
-                                    </svg></a>
-                            </div>
-                        </figure>
-                    </div>
-                </div>
-                <div class="service_card">
-                    <div class="service">
-                        <div class="service_info">
-                            <h2>Cyber Security</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, laboriosam? Atque,
-                                quo
-                                aspernatur inventore veniam fuga labore necessitatibus quas quis soluta saepe
-                                voluptas
-                                debitis nulla, dolore, aperiam tempora architecto repellat!</p>
-                            <a href="#" class="btn">Read more <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
-                                </svg>
-                            </a>
-                        </div>
-                        <figure class="service_image">
-                            <div class="service_image_overlay">
-                                <h2>Cyber Security</h2>
-                                <a href="#" class="btn">Read more <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
-                                    </svg></a>
-                            </div>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-
-            <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </section>
-
-        <section class="blog_section wrapper" id="blog">
-            <div class="section_header service_header wow animate__animated animate__fadeInUp">
-                <h4>Blogs</h4>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
-            </div>
-
-            <div class="blog_container">
-                <div class="blog_wrapper"></div>
-
-                <a href="./blog.html" class="blog_btn btn">View more blogs <svg xmlns="http://www.w3.org/2000/svg"
+                <!-- <a href="javascript:void(0)" class="product_btn btn">View more products <svg xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+                    </svg></a> -->
+            </div>
+
+            <div class="more_products_container">
+                <h2 class="products_title">More Products</h2>
+
+                <div id="products_container">
+                    <div class="more_products wrapper">
+                        <div class="product_card_skeleton"></div>
+                        <div class="product_card_skeleton"></div>
+                        <div class="product_card_skeleton"></div>
+                        <div class="product_card_skeleton"></div>
+                    </div>
+
+                    <div class="scrollable_products_wrapper wrapper">
+                        <h3>Top porducts in electronics for you</h3>
+
+                        <a href="javascript:void(0)" class="scroll_left_btn" onclick="productScroll(0, 'left')">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </a>
+
+                        <div class="scrollable_products">
+                            <div class="scrollable_product_skeleton"></div>
+                            <div class="scrollable_product_skeleton"></div>
+                            <div class="scrollable_product_skeleton"></div>
+                            <div class="scrollable_product_skeleton"></div>
+                            <div class="scrollable_product_skeleton"></div>
+                            <div class="scrollable_product_skeleton"></div>
+                            <div class="scrollable_product_skeleton"></div>
+                        </div>
+
+                        <a href="javascript:void(0)" class="scroll_right_btn" onclick="productScroll(0, 'right')">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="scrollable_products_wrapper wrapper">
+                        <h3>Top porducts in electronics for you</h3>
+
+                        <a href="javascript:void(0)" class="scroll_left_btn" onclick="productScroll(1, 'left')">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </a>
+
+                        <div class="scrollable_products">
+                            <div class="scrollable_product_skeleton"></div>
+                            <div class="scrollable_product_skeleton"></div>
+                            <div class="scrollable_product_skeleton"></div>
+                            <div class="scrollable_product_skeleton"></div>
+                            <div class="scrollable_product_skeleton"></div>
+                            <div class="scrollable_product_skeleton"></div>
+                            <div class="scrollable_product_skeleton"></div>
+                        </div>
+
+                        <a href="javascript:void(0)" class="scroll_right_btn" onclick="productScroll(1, 'right')">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="more_products wrapper">
+                        <div class="product_card_skeleton"></div>
+                        <div class="product_card_skeleton"></div>
+                        <div class="product_card_skeleton"></div>
+                        <div class="product_card_skeleton"></div>
+                    </div>
+                </div>
+
+                <a class="product_btn btn">Show more <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
                     </svg></a>
             </div>
 
-            <ul class="circles blog_circles">
+            <ul class="circles product_circles">
                 <li></li>
                 <li></li>
                 <li></li>
@@ -666,43 +502,8 @@
                 <li></li>
                 <li></li>
                 <li></li>
-
-                <!-- <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li> -->
             </ul>
         </section>
-
-        <section class="about_section section wrapper" id="about">
-            <div class="section_header about_header wow animate__animated animate__fadeInUp">
-                <h4>About</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quae molestias nobis a temporibus
-                    quisquam, officia dolore ipsum autem sint delectus incidunt sunt fugiat assumenda suscipit libero
-                    quod reiciendis aliquid?</p>
-                <h2>Our Team</h2>
-            </div>
-
-            <div class="about_card_wrapper">
-                <div class="about_skeleton"></div>
-                <div class="about_skeleton"></div>
-                <div class="about_skeleton"></div>
-            </div>
-        </section>
-
-        <!-- <section class="testimonial_section section">
-            <div class="section_header service_header wow animate__animated animate__fadeInUp">
-                <h4>Testimonial</h4>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
-            </div>
-        </section> -->
     </main>
 
     <!--===== Footer =====-->
@@ -787,8 +588,8 @@
         integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="./script/home1.js"></script>
     <script src="./script/header.js"></script>
+    <script src="./script/product.js"></script>
 </body>
 
 </html>
