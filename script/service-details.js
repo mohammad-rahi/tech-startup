@@ -4,6 +4,13 @@ document.querySelectorAll('.serivce_tabs .tab').forEach(item => {
         document.querySelector('.serivce_tabs .active').classList.remove('active');
 
         item.classList.add('active');
+
+        if (item.classList.contains('tab2')) {
+            document.querySelector('.tab_border').style.left = document.querySelector('.tab').clientWidth + "px";
+        }
+        else {
+            document.querySelector('.tab_border').style.left = "0";
+        }
     });
 });
 
@@ -35,3 +42,17 @@ document.querySelectorAll('.faq_title').forEach(btn => {
 
     });
 });
+
+const tabBorderWidth = () => {
+    document.querySelector('.tab_border').style.width = document.querySelector('.tab').clientWidth + "px";
+
+    if (document.querySelector('.tab2').classList.contains('active')) {
+        document.querySelector('.tab_border').style.left = document.querySelector('.tab').clientWidth + "px";
+    }
+    else {
+        document.querySelector('.tab_border').style.left = "0";
+    }
+};
+
+window.addEventListener('resize', tabBorderWidth);
+window.addEventListener('load', tabBorderWidth);

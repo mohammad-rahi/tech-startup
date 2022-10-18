@@ -1,7 +1,8 @@
 /*===== Footer =====*/
 .footer {
     background: linear-gradient(to right, #000, #111, #000);
-    color: #fff;
+    background: var(--skeleton-color1);
+    color: var(--primary-color);
 }
 
 .top {
@@ -15,7 +16,8 @@
 }
 
 .top:hover {
-    background: linear-gradient(to right, #111, #000, #111);
+    /* background: linear-gradient(to right, #111, #000, #111); */
+    background-color: var(--skeleton-color2);
 }
 
 .top_wrapper {
@@ -35,7 +37,7 @@
 
 .footer_wrapper h4 {
     font-size: 20px;
-    color: var(--secondary-color2);
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 

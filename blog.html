@@ -228,21 +228,74 @@
 
     <!--===== Content =====-->
     <main>
-        <section class="blog_section wrapper" id="blog">
-            <div class="section_header service_header wow animate__animated animate__fadeInUp">
+        <section class="blog_section" id="blog">
+            <div class="section_header wow animate__animated animate__fadeInUp wrapper">
                 <h4>Blogs</h4>
                 <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
             </div>
 
             <div class="blog_container">
-                <div class="blog_wrapper">
+                <h1 class="blog_title wrapper">Featured Blogs</h1>
+                <div class="blog_wrapper wrapper">
                     <div class="blog_skeleton"></div>
+                    <div class="blog_skeleton"></div>
+                </div>
+            </div>
+
+            <div class="recent_blogs wrapper">
+                <div class="blogs_actions">
+                    <form>
+                        <div class="search_form">
+                            <div class="search_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                </svg>
+                            </div>
+                            <input type="text" placeholder="Search" id="search" />
+                        </div>
+                    </form>
+
+                    <div class="tags">
+                        <div class="tag active">All <span>54</span></div>
+                        <div class="tag">Programming <span>45</span></div>
+                        <div class="tag">Web Development <span>93</span></div>
+                        <div class="tag">Cyber Security <span>25</span></div>
+                        <div class="tag">Career <span>19</span></div>
+                        <div class="tag">Resume <span>4</span></div>
+                        <div class="tag">Git and Github <span>3</span></div>
+                    </div>
+                </div>
+                <h1 class="blog_title">Recent Blogs</h1>
+                <div class="recent_blog_wrapper">
                     <div class="blog_skeleton"></div>
                     <div class="blog_skeleton"></div>
                     <div class="blog_skeleton"></div>
                 </div>
 
+                <div class="paginations">
+                    <div class="pagination">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5" />
+                        </svg>
+                    </div>
+                    <div class="pagination active">1</div>
+                    <div class="pagination">2</div>
+                    <div class="pagination">3</div>
+                    <div class="pagination">4</div>
+                    <div class="pagination">5</div>
+                    <div class="pagination">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </div>
+                </div>
             </div>
 
             <ul class="circles blog_circles">

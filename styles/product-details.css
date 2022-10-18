@@ -263,3 +263,43 @@ hr {
     margin-left: .1rem;
     animation: pulse 700ms infinite alternate;
 }
+
+@media only screen and (max-width: 1024px) {
+    .wrapper_right_top {
+        grid-template-columns: 100%;
+    }
+}
+
+@media only screen and (max-width: 922px) {
+    .productDetails_wrapper .wrapper {
+        gap: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .productDetails_wrapper .wrapper {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .productDetails_wrapper .wrapper_left {
+        grid-template-columns: 100%;
+    }
+
+    .product_images {
+        flex-direction: row;
+        grid-row-start: 2;
+        margin-bottom: 2rem;
+    }
+
+    .product_images>div {
+        max-width: 70px;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .section_header h2 {
+        margin: unset !important;
+        padding-top: 3rem;
+        font-size: 2.5rem;
+    }
+}

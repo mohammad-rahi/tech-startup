@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Startup</title>
+    <link rel="shortcut icon" href="./assets/images/startup_logo.svg" type="image/x-icon">
+
+    <!--===== Font Awesome =====-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--===== Styles =====-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/blog-details.css">
+</head>
+
+<body class="light sky" id="top">
+    <div class="loading">
+        <div>
+            <div class="loading_logo"></div>
+            <div class="loading_animated">
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <!--===== Header =====-->
+    <header class="navbar_header">
+        <nav class="navbar_nav wrapper">
+            <a href="./index.html" class="navbar_logo">
+                <img src="./assets/images/startup_logo.svg" loading="lazy" /> Tech Startup
+            </a>
+
+            <div class="navbar_menu_wrapper">
+                <ul class="navbar_menu">
+                    <li class="navbar_list">
+                        <a class="navbar_link" href="product.html" onclick="closeMenu()">Products</a>
+                        <ul class="navbar_dropdown_menu">
+                            <li class="navbar_dropdown_list">
+                                <a href="#products" class="navbar_dropdown_link">
+                                    <img src="./assets/images/product1.png" />
+                                    <div>
+                                        <h4>Galaxy fidget spinner</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="navbar_dropdown_list">
+                                <a href="#products" class="navbar_dropdown_link">
+                                    <img src="./assets/images/product2.png" />
+                                    <div>
+                                        <h4>Beats Solo3 Wireless</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="navbar_dropdown_list">
+                                <a href="#products" class="navbar_dropdown_link">
+                                    <img src="./assets/images/product3.png" />
+                                    <div>
+                                        <h4>Metal Purple Speaker</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar_list">
+                        <a class="navbar_link" href="./service.html" onclick="closeMenu()">Services</a>
+                        <ul class="navbar_dropdown_menu">
+                            <li class="navbar_dropdown_list">
+                                <a href="#services" class="navbar_dropdown_link">
+                                    <img src="./assets/images/data_analysis.jpg" />
+                                </a>
+                            </li>
+                            <li class="navbar_dropdown_list">
+                                <a href="#services" class="navbar_dropdown_link">
+                                    <img src="./assets/images/frontend.jpg" />
+
+                                </a>
+                            </li>
+                            <li class="navbar_dropdown_list">
+                                <a href="#services" class="navbar_dropdown_link">
+                                    <img src="./assets/images/cyber_security.jpg" />
+
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar_list">
+                        <a class="navbar_link" href="./blog.html" onclick="closeMenu()">Blog
+                            <!-- <ul class="navbar_dropdown_menu">
+                                <li class="navbar_dropdown_list">
+                                    <a href="#services" class="navbar_dropdown_link">
+                                        <img src="./assets/images/data_analysis.jpg" />
+                                    </a>
+                                </li>
+                                <li class="navbar_dropdown_list">
+                                    <a href="#services" class="navbar_dropdown_link">
+                                        <img src="./assets/images/frontend.jpg" />
+                                    </a>
+                                </li>
+                                <li class="navbar_dropdown_list">
+                                    <a href="#services" class="navbar_dropdown_link">
+                                        <img src="./assets/images/cyber_security.jpg" />
+                                    </a>
+                                </li>
+                            </ul> -->
+                        </a>
+                    </li>
+                    <li class="navbar_list">
+                        <a class="navbar_link" href="./about.html" onclick="closeMenu()">About
+                            <!-- <ul class="navbar_dropdown_menu">
+                                <li class="navbar_dropdown_list">
+                                    <a href="#services" class="navbar_dropdown_link">
+                                        <img src="./assets/images/data_analysis.jpg" />
+                                        <div>
+                                            <h4>Data Analysis</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="navbar_dropdown_list">
+                                    <a href="#services" class="navbar_dropdown_link">
+                                        <img src="./assets/images/frontend.jpg" />
+                                        <div>
+                                            <h4>Web Development</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="navbar_dropdown_list">
+                                    <a href="#services" class="navbar_dropdown_link">
+                                        <img src="./assets/images/cyber_security.jpg" />
+                                        <div>
+                                            <h4>Cyber Security</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul> -->
+                        </a>
+                    </li>
+                    <li class="navbar_list">
+                        <a class="navbar_link btn" href="#" onclick="closeMenu()">Get Started</a>
+                    </li>
+                    <li class="navbar_list theme_btn">
+                        <a class="navbar_link" href="javascript:void(0)"><i class="fa-solid fa-sliders"></i></a>
+                        <div class="navbar_dropdown_menu">
+                            <div>
+                                <strong>Themes:</strong>
+                                <div class="theme_wrapper">
+                                    <div data-theme="light">
+                                        <i class="fa-solid fa-sun"></i>
+                                    </div>
+                                    <div data-theme="dark">
+                                        <i class="fa-solid fa-moon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="colors">
+                                <strong>Colors:</strong>
+                                <div class="color_wrapper">
+                                    <div data-color="purple"></div>
+                                    <div data-color="rosy"></div>
+                                    <div data-color="sky"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="navbar_overlay" onclick="closeMenu()"></div>
+
+                <div class="navbar_icon_wrapper">
+                    <div class="mobile_theme">
+                        <a href="javascript:void(0)" class="mobile_theme_icon"
+                            onclick="document.querySelector('.mobile_theme_content').classList.add('active')">
+                            <i class="fa-solid fa-sliders"></i>
+                        </a>
+
+                        <div class="mobile_theme_content">
+                            <div class="mobile_theme_overlay"
+                                onclick="document.querySelector('.mobile_theme_content').classList.remove('active')">
+                            </div>
+                            <div class="theme_content">
+                                <div>
+                                    <strong>Themes:</strong>
+                                    <div class="theme_wrapper mobile_theme_wrapper">
+                                        <div data-theme="light">
+                                            <i class="fa-solid fa-sun"></i>
+                                        </div>
+                                        <div data-theme="dark">
+                                            <i class="fa-solid fa-moon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="colors">
+                                    <strong>Colors:</strong>
+                                    <div class="color_wrapper mobile_color_wrapper">
+                                        <div data-color="purple"></div>
+                                        <div data-color="rosy"></div>
+                                        <div data-color="sky"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="bars" onclick="openMenu()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--===== Content =====-->
+    <main>
+        <section class="blogDetail_section section">
+            <div class="blogDetail_wrapper">
+                <div>
+                    <ul class="breadcrumbs">
+                        <li><span>Home</span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </li>
+                        <li><span>Category</span></li>
+                    </ul>
+                    <h1 class="blogTitle">
+                        <div class="blogTitle_skeleton"></div>
+                    </h1>
+
+                    <div class="date_wrapper">
+                        <small class="date">OCTOBER 18, 2022 / 2 min read</small>
+                    </div>
+
+                    <figure class="blogImage">
+                        <div class="blogImage_skeleton"></div>
+                    </figure>
+
+                    <div class="blog_credit">
+                        <div class="author">
+                            <figure class="author_image">
+                                <div class="author_image_skeleton"></div>
+                            </figure>
+                            <div class="name_date">
+                                <strong class="author_name">
+                                    <div class="author_name_skeleton"></div>
+                                </strong>
+                                <small class="profession">Frontend Developer & Technical Writer</small>
+                            </div>
+                        </div>
+
+                        <div class="share_icons">
+                            <a><i class="fa-brands fa-facebook"></i></a>
+                            <a><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="blogBody">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, nisi quas autem voluptates
+                            modi consequuntur accusamus blanditiis explicabo, labore excepturi quod quidem beatae ut
+                            ipsa, aperiam veniam asperiores sit laudantium.</p>
+
+                        <p>In this article you're going to learn, how to .</p>
+                        <p>Let's dive into deep!</p>
+
+                        <div class="toc">
+                            <h3>Table of Contents</h3>
+                            <ul>
+                                <li>Lorem dolor sit amet consectetur.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                                <li>Lorem ipsum dolor sitconsectetur.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet sitconsectetur.</li>
+                            </ul>
+                        </div>
+
+                        <div class="content_item">
+                            <h2>Lorem ipsum dolor sit amet</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, excepturi pariatur
+                                molestiae, ratione autem quasi sapiente tempore accusantium modi suscipit, dolores
+                                reiciendis! Est mollitia exercitationem, voluptate culpa tenetur quos totam.</p>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam animi eaque
+                                exercitationem possimus eligendi, fugit recusandae tempore doloribus minus amet non
+                                ullam ipsam officia omnis dicta debitis dolorum explicabo quae.</p>
+
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae magnam impedit, ad
+                                expedita quasi non hic praesentium amet obcaecati distinctio animi molestiae, est odit
+                                error fuga repellat unde delectus eum?</p>
+                        </div>
+
+                        <div class="content_item">
+                            <h2>Lorem ipsum dolor sit amet</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, excepturi pariatur
+                                molestiae, ratione autem quasi sapiente tempore accusantium modi suscipit, dolores
+                                reiciendis! Est mollitia exercitationem, voluptate culpa tenetur quos totam.</p>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam animi eaque
+                                exercitationem possimus eligendi, fugit recusandae tempore doloribus minus amet non
+                                ullam ipsam officia omnis dicta debitis dolorum explicabo quae.</p>
+
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae magnam impedit, ad
+                                expedita quasi non hic praesentium amet obcaecati distinctio animi molestiae, est odit
+                                error fuga repellat unde delectus eum?</p>
+                        </div>
+
+                        <div class="content_item">
+                            <h2>Lorem ipsum dolor sit amet</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, excepturi pariatur
+                                molestiae, ratione autem quasi sapiente tempore accusantium modi suscipit, dolores
+                                reiciendis! Est mollitia exercitationem, voluptate culpa tenetur quos totam.</p>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam animi eaque
+                                exercitationem possimus eligendi, fugit recusandae tempore doloribus minus amet non
+                                ullam ipsam officia omnis dicta debitis dolorum explicabo quae.</p>
+
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae magnam impedit, ad
+                                expedita quasi non hic praesentium amet obcaecati distinctio animi molestiae, est odit
+                                error fuga repellat unde delectus eum?</p>
+                        </div>
+
+                        <div class="content_item">
+                            <h2>Let's Conclude</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, excepturi pariatur
+                                molestiae, ratione autem quasi sapiente tempore accusantium modi suscipit, dolores
+                                reiciendis! Est mollitia exercitationem, voluptate culpa tenetur quos totam.</p>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam animi eaque
+                                exercitationem possimus eligendi, fugit recusandae tempore doloribus minus amet non
+                                ullam ipsam officia omnis dicta debitis dolorum explicabo quae.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="author_info">
+                    <figure class="footer_author_image">
+                        <div class="footer_image_skeleton"></div>
+                    </figure>
+
+                    <div>
+                        <strong>Mohammad Rahi</strong>
+                        <p><small>Frontend Develper & Technical Writer</small></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--===== Footer =====-->
+    <footer class="footer">
+        <a href="#top" class="top">
+            <div class="top_wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" width="16" height="16">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+                </svg>
+                Back to top
+            </div>
+        </a>
+        <div class="wrapper">
+            <div class="footer_wrapper">
+                <div>
+                    <h4>Sitemap</h4>
+                    <ul>
+                        <li>
+                            <a href="#home">TechStartup.com</a>
+                        </li>
+                        <li>
+                            <a href="#product">Product</a>
+                        </li>
+                        <li>
+                            <a href="#service">Service</a>
+                        </li>
+                        <li>
+                            <a href="#blog">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Terms of use</h4>
+                    <ul>
+                        <li>
+                            <a href="#service">About</a>
+                        </li>
+                        <li>
+                            <a href="#blog">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#home">Terms of Condition</a>
+                        </li>
+                        <li>
+                            <a href="#product">Privacy & Policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_social">
+                    <h4>Follow us on</h4>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-basketball"></i> Dribble</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore reprehenderit nisi perspiciatis
+                        obcaecati.</p>
+                    <div class="newsletter_form">
+                        <input type="email" required placeholder="Enter your email" />
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="footer_copyright">&copy; 2022 Copyright TechStartup.com</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./script/header.js"></script>
+    <script src="./script/blog-details.js"></script>
+</body>
+
+</html>

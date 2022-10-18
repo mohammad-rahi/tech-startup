@@ -3,7 +3,7 @@ let users = fetch('https://jsonplaceholder.typicode.com/users')
     .then(res => res.json())
     .then(data => {
         document.querySelector('.about_card_wrapper').innerHTML = '';
-        data.slice(0, 6).map((user, i) => {
+        data.slice(0, 9).map((user, i) => {
 
             let rand1 = Math.floor(Math.random() * 256);
             let rand2 = Math.floor(Math.random() * 256);
@@ -49,7 +49,7 @@ let users = fetch('https://jsonplaceholder.typicode.com/users')
                     <p><span>Address:</span>
                     <Address>${user.address.street}, ${user.address.city}, ${user.address.zipcode}</Address>
                     </p>
-                    <a href="#" class="btn">Contact ${user.username}</a>
+                    <a href="javascript:void(0)" class="btn">Contact ${user.username}</a>
                 </div>
             </div>
         </div>`;

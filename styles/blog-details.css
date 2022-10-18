@@ -1,0 +1,189 @@
+.blogDetail_wrapper {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.breadcrumbs li span {
+    color: var(--secondary-color2);
+    cursor: pointer;
+}
+
+.breadcrumbs li {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.breadcrumbs svg {
+    width: 1rem;
+}
+
+.breadcrumbs li span:hover {
+    text-decoration: underline;
+}
+
+.date_wrapper {
+    margin-bottom: 2rem;
+}
+
+.blogTitle {
+    font-size: 3.5rem;
+    margin: 1rem 0;
+}
+
+.blogTitle_skeleton {
+    height: 100px;
+    animation: pulse 700ms linear infinite alternate;
+}
+
+.blogImage {
+    aspect-ratio: 16/9;
+}
+
+.blogImage_skeleton {
+    animation: pulse 700ms linear infinite alternate;
+    aspect-ratio: 16/9;
+}
+
+.blog_credit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author_image {
+    width: 70px;
+    aspect-ratio: 1;
+}
+
+.author_image_skeleton {
+    aspect-ratio: 1;
+    animation: pulse 700ms linear infinite alternate;
+}
+
+.author_name {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+
+.author_name_skeleton {
+    animation: pulse 700ms linear infinite alternate;
+    width: 150px;
+    height: 35px;
+}
+
+.name_date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}
+
+small {
+    color: gray;
+}
+
+.share_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.share_icons a {
+    width: 1.3rem;
+    height: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.blogBody p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.blogBody p:first-child {
+    font-size: 1.5rem;
+}
+
+.blogBody h2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.toc {
+    margin: 2rem 0;
+}
+
+.toc h3 {}
+
+.toc ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.author_info {
+    margin-top: 6rem;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer_author_image {
+    aspect-ratio: 1;
+    width: 100px;
+}
+
+.footer_image_skeleton {
+    animation: pulse 700ms linear infinite alternate;
+    width: 100px;
+    aspect-ratio: 1;
+}
+
+.author_info>div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.author_info strong {
+    font-size: 1.5rem;
+}
+
+.author_info small {
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .blogTitle {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .blogTitle {
+        font-size: 2rem;
+    }
+}
