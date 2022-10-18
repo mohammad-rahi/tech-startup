@@ -204,6 +204,7 @@
     font-weight: 700;
     font-size: 1.2rem;
     background: var(--gradient-color2);
+    color: var(--primary-color);
     border: none;
     width: 100%;
     padding: 1.2rem;
@@ -233,12 +234,18 @@
     transform: scale(0);
     height: 0;
     transition: var(--transition);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
 }
 
 .faq_content.active {
     transform: scaleX(1);
     height: fit-content;
     padding: 1.2rem;
+    opacity: unset;
+    visibility: unset;
+    z-index: unset;
 }
 
 .faq_image {
